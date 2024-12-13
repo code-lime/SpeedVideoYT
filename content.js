@@ -54,6 +54,7 @@ function applyAll() {
 			var overlay = document.createElement("div");
 			overlay.id = "lime_overlay";
 			title.appendChild(overlay);
+			applyState(overlay, video);
 			apply(overlay, video, 1);
 			apply(overlay, video, 2);
 			apply(overlay, video, 2.5);
@@ -64,7 +65,6 @@ function applyAll() {
 			apply(overlay, video, 5);
 			apply(overlay, video, 6);
 			apply(overlay, video, 10);
-			applyState(overlay, video);
 			applyVolume(overlay, video);
 		}
 	} catch {}
