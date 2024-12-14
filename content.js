@@ -51,6 +51,11 @@ function applyAll() {
 		var video = document.querySelector(".html5-video-player[id=movie_player] .html5-main-video");
 		var title = document.querySelector(".html5-video-player[id=movie_player] .ytp-left-controls");
 		if (video !== null && title !== null && title.querySelector("#lime_overlay") === null) {
+			var split_overlay = document.createElement("div");
+			split_overlay.id = "split_overlay";
+			split_overlay.classList.add("ytp-chapter-container");
+			title.appendChild(split_overlay);
+
 			var overlay = document.createElement("div");
 			overlay.id = "lime_overlay";
 			title.appendChild(overlay);
